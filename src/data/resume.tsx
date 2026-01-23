@@ -1,4 +1,4 @@
-import { Icons } from "@/components/icons";
+﻿import { Icons } from "@/components/icons";
 import { HomeIcon, FileTextIcon } from "lucide-react";
 
 export const DATA = {
@@ -8,40 +8,102 @@ export const DATA = {
   location: "Santa Fe, Argentina",
   locationLink: "https://maps.app.goo.gl/WSasfQ4tvMKpFsJb6",
   description:
-    "Desarrollador Web Full Stack en formación constante, con experiencia en e-commerce y atención al cliente.",
+    "Desarrollador Frontend / Full Stack orientado a productos reales. Construyo aplicaciones web que resuelven problemas reales de negocio: desde e-commerce hasta sistemas internos e integraciones entre plataformas. Experiencia con React, Node.js y APIs en producción.",
   summary:
-    "Apasionado por resolver problemas y crear soluciones digitales, especializado en React.js, Node.js y MongoDB. Actualmente aprendiendo SQL, MySQL y PHP para ampliar mi stack técnico.",
-  avatarUrl: "me2.jpeg",
+    "Soy desarrollador web con fuerte orientación al Frontend, pero con experiencia real en Full Stack y desarrollo de productos en entornos reales.\n\nMi background en e-commerce y ventas digitales me permite entender no solo el código, sino también al usuario, el negocio y el impacto real de cada decisión técnica.\n\nTrabajé tanto en entornos empresariales como en proyectos freelance, desarrollando CRMs internos, integraciones entre plataformas de venta y sitios e-commerce que hoy están en uso.\n\nActualmente busco sumarme a un equipo como Frontend o Full Stack Jr, donde pueda aportar valor desde el primer día y seguir creciendo profesionalmente.",
+  avatarUrl: "/me2.jpeg",
   skills: [
-    // 🔷 Frontend principal
-    "React.js",
-    "JavaScript (ES6+)",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "Bootstrap",
-    "SCSS",
-    "Material-UI",
-    "Redux",
-
-    // 🟩 Backend y base de datos
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "SQL",
-    "MySQL",
-    "PHP",
-
-    // 🚀 Herramientas y deploy
-    "Docker",
-    "Git & GitHub",
-    "Firebase",
-    "Netlify",
-
-    // 🛠️ Complementarias
-    "ChatGPT",
-    "Microsoft Excel",
-    "Canva",
+    {
+      name: "React",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/react/61DAFB",
+    },
+    {
+      name: "JavaScript (ES6+)",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/javascript/F7DF1E",
+    },
+    {
+      name: "HTML",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/html5/E34F26",
+    },
+    {
+      name: "CSS",
+      icon: null,
+      logoUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      name: "Git",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/git/F05032",
+    },
+    {
+      name: "Node.js",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/nodedotjs/339933",
+    },
+    {
+      name: "Express",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/express/8A8A8A",
+    },
+    {
+      name: "MongoDB",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/mongodb/47A248",
+    },
+    {
+      name: "Supabase",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/supabase/3FCF8E",
+    },
+    {
+      name: "SQL",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/postgresql/4169E1",
+    },
+    {
+      name: "GitHub",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/github/181717",
+    },
+    {
+      name: "GitLab",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/gitlab/FC6D26",
+    },
+    {
+      name: "Figma",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/figma/F24E1E",
+    },
+    {
+      name: "Postman",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/postman/FF6C37",
+    },
+    {
+      name: "Vitest",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/vitest/6E9F18",
+    },
+    {
+      name: "WordPress",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/wordpress/21759B",
+    },
+    {
+      name: "WooCommerce",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/woocommerce/96588A",
+    },
+    {
+      name: "APIs REST",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/swagger/85EA2D",
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
@@ -61,6 +123,7 @@ export const DATA = {
         icon: Icons.github,
         navbar: true,
       },
+
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/genarobottarlini/",
@@ -76,8 +139,7 @@ export const DATA = {
       badges: [],
       location: "Santa Fe, Argentina",
       title: "Analista de E-commerce",
-      logoUrl:
-        "https://media.licdn.com/dms/image/v2/D4D0BAQE4Hrq7OOXa8A/company-logo_200_200/company-logo_200_200/0/1685630901491?e=1755734400&v=beta&t=u5keV-gxhRK2DatUQAgiL3t5EMJZNWglUkqAElvvg7Y",
+      logoUrl: "/logoNation.jpeg",
       start: "Octubre 2024",
       end: "Actualidad",
       description:
@@ -89,8 +151,7 @@ export const DATA = {
       badges: [],
       location: "Santa Fe, Argentina",
       title: "Encargado de tienda",
-      logoUrl:
-        "https://media.licdn.com/dms/image/v2/D4D0BAQHH3cUzRxByLg/company-logo_200_200/company-logo_200_200/0/1666136186864/kol_accesorios_para_celulares_logo?e=1755734400&v=beta&t=WWcW8cIX8ETq7bwXYrHDO9FHEHg91AxwSO0J-t5dSRE",
+      logoUrl: "/logoKol.png",
       start: "Mayo 2024",
       end: "Noviembre 2024",
       description:
@@ -112,50 +173,65 @@ export const DATA = {
   ],
   education: [
     {
-      school: "CoderHouse",
-      href: "https://www.coderhouse.com/ar/?pipe_source=google&pipe_medium=cpc&pipe_campaign=0&gad_source=1&gad_campaignid=12058006243&gbraid=0AAAAACoxfTJAgHeNoQpDGuFg3sj-EmiNh&gclid=CjwKCAjwx8nCBhAwEiwA_z__0xC3UFbE933UU0LCOOd6jxkrnsJUfwc3e1BojGMcCwu2N4cTK-y2QhoCsGUQAvD_BwE",
+      school: "Universidad Tecnológica Nacional (UTN) - FRBA",
+      href: "https://www.frba.utn.edu.ar/",
+      degree: "Tecnicatura Universitaria en Programación",
+      logoUrl:
+        "https://assets.utnba.centrodeelearning.com/public-api/files/c7b6961eb748aa3e91586c9b83ca540b/images",
+      start: "2025",
+      end: "Actualidad",
+    },
+    {
+      school: "Coderhouse",
+      href: "https://www.coderhouse.com/ar/",
       degree: "Desarrollador Web Full Stack",
       logoUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNHy-rUushLaa7whsic-6agzKzK6CAN-Mbow&s",
-      start: "Febrero 2024",
-      end: "Abril 2025",
+      start: "2024",
+      end: "2025",
     },
     {
-      school: "UNL - Ciencias Económicas",
-      href: "https://www.unl.edu.ar/",
-      degree: "Licenciatura en Administración (incompleta)",
-      logoUrl:
-        "https://media.licdn.com/dms/image/v2/C560BAQHYPsaxEHY6Ow/company-logo_100_100/company-logo_100_100/0/1630598431081/universidad_nacional_del_litoral_logo?e=1755734400&v=beta&t=QE05q69OFrckEzAmr88K52UPnBj6TXVOshCD9dAdKd0",
-      start: "Marzo 2022",
-      end: "Junio 2023",
-    },
-    {
-      school: "Escuela Técnica N°1 Dr. Herminio J. Quirós",
+      school: "EET N°1 \"Dr. Herminio J. Quirós\"",
       href: "",
       degree: "Técnico Mecánico",
-      logoUrl:
-        "https://scontent.fsfn6-1.fna.fbcdn.net/v/t39.30808-6/274237231_102324212399694_7142862473963578852_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=JlwUALwM-bAQ7kNvwEw_XIo&_nc_oc=Adm2UO_kTpe58D-NZWpEcaT8loms4TzA2Sjph_6hh-mPqWJQaHoYScxFptu1YSX6TPkJvmMnxVXkn8K8FmluBXhz&_nc_zt=23&_nc_ht=scontent.fsfn6-1.fna&_nc_gid=x7eWg_vYXTnqwWoIB4om1Q&oh=00_AfPlzVdM4BzKiXVeQC7sll9GVgi5g0ZKvzlgTSVQpUMiGg&oe=68590732",
-      start: "Marzo 2012",
-      end: "Noviembre 2018",
+      logoUrl: "/logo escuela tecnica.png",
+      start: "2012",
+      end: "2018",
     },
   ],
   projects: [
     {
-      title: "Gestor de Clientes - Nation",
+      title: "Integrador de Stock - Nation",
+      href: "https://github.com/GBottarlini/IntegradorML",
+      dates: "En curso",
+      active: true,
+      description:
+        "Aplicación web que sincroniza el stock entre Tiendanube y MercadoLibre, evitando sobreventas y permitiendo un control centralizado del inventario.\n\n- Stack: React, Node.js, Supabase, API de Tiendanube y API de MercadoLibre.\n- Responsabilidades: frontend, backend, integraciones, base de datos y despliegue en Render y Netlify.\n- Impacto: eliminación de sobreventas y mejora en la eficiencia operativa.",
+      technologies: [
+        "React",
+        "Node.js",
+        "Supabase",
+        "API de Tiendanube",
+        "API de MercadoLibre",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/GBottarlini/IntegradorML",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/integrador nation.png",
+      video: "",
+    },
+    {
+      title: "CRM Interno - Nation",
       href: "https://gestionclientessa.netlify.app",
       dates: "Junio 2025",
       active: true,
       description:
-        "Aplicación Full Stack para gestionar campañas de marketing de neumáticos mediante filtros avanzados y sincronización en tiempo real con WebSocket.",
-      technologies: [
-        "HTML5",
-        "Tailwind CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Socket.IO",
-      ],
+        "CRM interno desarrollado a medida para gestionar clientes, estados de venta y actualizaciones en tiempo real para el equipo comercial.\n\n- Stack: React, Node.js, MongoDB y WebSockets.\n- Responsabilidades: frontend, backend, lógica de negocio, estados de venta y tiempo real.\n- Impacto: uso diario, mejor organización y optimización del proceso de ventas.",
+      technologies: ["React", "Node.js", "MongoDB", "WebSockets"],
       links: [
         {
           type: "GitHub",
@@ -173,8 +249,26 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://i.ibb.co/21d6kPfT/nationSA.png", 
-      video: "", 
+      image: "https://i.ibb.co/21d6kPfT/nationSA.png",
+      video: "",
+    },
+    {
+      title: "Jamabag - Sitio Web & E-commerce",
+      href: "https://jamabag.com.ar/",
+      dates: "2024",
+      active: false,
+      description:
+        "Sitio web y solución de e-commerce desarrollados desde cero, enfocados en visibilidad de productos y ventas basadas en consultas.\n\n- Contexto: necesitaba profesionalizar su presencia digital y mostrar el catálogo sin compras directas.\n- Responsabilidades: WordPress y WooCommerce, flujo de compra basado en consultas, SEO básico, dominio y hosting.\n- Resultado: presencia digital profesional y primer proyecto freelance gestionado de punta a punta.",
+      technologies: ["WordPress", "WooCommerce", "SEO", "Dominio y hosting"],
+      links: [
+        {
+          type: "Web",
+          href: "https://jamabag.com.ar/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/video jamabag.mp4",
     },
     {
       title: "Festival de Música - Sitio Web",
@@ -196,8 +290,8 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://i.ibb.co/JWyXqQxh/festival-Mus.png", 
-      video: "", 
+      image: "https://i.ibb.co/JWyXqQxh/festival-Mus.png",
+      video: "",
     },
     {
       title: "Ipoint E-commerce SPA",
@@ -254,20 +348,28 @@ export const DATA = {
       video: "",
     },
     {
-  title: "Portfolio Web (Versión Anterior)",
-  href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",
-  dates: "Abril 2024",
-  active: false,
-  description:
-    "Primera versión de mi portfolio personal, desarrollada con HTML, CSS y JavaScript vanilla. Incluye animaciones, sección de proyectos y contacto.",
-  technologies: ["HTML5", "CSS3", "JavaScript"],
-  links: [
-    { type: "GitHub", href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",icon: <Icons.github className="size-3" />, },
-    { type: "Web", href: "https://gbottarlini.github.io/Portfolio-Genaro-Bottarlini/",icon: <Icons.globe className="size-3" />, }
+      title: "Portfolio Web (Versión anterior)",
+      href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",
+      dates: "Abril 2024",
+      active: false,
+      description:
+        "Primera versión de mi portfolio personal, desarrollada con HTML, CSS y JavaScript vanilla. Incluye animaciones, sección de proyectos y contacto.",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Web",
+          href: "https://gbottarlini.github.io/Portfolio-Genaro-Bottarlini/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "https://i.ibb.co/1tHHBthN/cvViejo.png",
+      video: "",
+    },
   ],
-  image: "https://i.ibb.co/1tHHBthN/cvViejo.png", 
-  video: "",
-}
-
-  ],
+  hackathons: [],
 } as const;
