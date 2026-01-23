@@ -10,6 +10,7 @@ import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
+import type { ComponentType } from "react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -123,7 +124,7 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-wrap gap-2">
             {DATA.skills.map((skill, id) => {
-              const Icon = skill.icon;
+              const Icon = skill.icon as ComponentType<{ className?: string }> | null;
               const logoUrl = skill.logoUrl;
               return (
                 <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
