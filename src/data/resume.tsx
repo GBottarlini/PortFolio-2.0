@@ -1,5 +1,6 @@
 ﻿import { Icons } from "@/components/icons";
 import { HomeIcon, FileTextIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
 export const DATA = {
   name: "Gena Emmanuel Bottarlini",
@@ -371,5 +372,16 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [],
+  hackathons: [] as {
+    title: string;
+    dates: string;
+    location: string;
+    description: string;
+    image?: string;
+    links: {
+      icon: ReactNode;
+      title: string;
+      href: string;
+    }[];
+  }[],
 } as const;
