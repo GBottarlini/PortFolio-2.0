@@ -290,7 +290,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "/video jamabag.mp4",
+      video: "https://vimeo.com/1157919302?share=copy&fl=sv&fe=ci",
     },
     {
       title: "Festival de Música - Sitio Web",

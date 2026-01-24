@@ -8,6 +8,16 @@ import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
 
+function getVimeoEmbedUrl(url: string) {
+  const match = url.match(/vimeo\.com\/(\d+)/);
+  if (!match) {
+    return null;
+  }
+
+  const id = match[1];
+  return `https://player.vimeo.com/video/${id}?autoplay=1&loop=1&muted=1&background=1&byline=0&title=0&portrait=0`;
+}
+
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
@@ -69,14 +79,32 @@ export function ProjectCard({
           className="block"
         >
           {video ? (
-            <video
-              src={video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-48 object-cover"
-            />
+            (() => {
+              const vimeoUrl = getVimeoEmbedUrl(video);
+              if (vimeoUrl) {
+                return (
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <iframe
+                      src={vimeoUrl}
+                      title={`${title} video`}
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      className="absolute inset-0 w-full h-full pointer-events-none"
+                    />
+                  </div>
+                );
+              }
+
+              return (
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-48 object-cover"
+                />
+              );
+            })()
           ) : image ? (
             <ProjectImage src={image} alt={title} />
           ) : (
