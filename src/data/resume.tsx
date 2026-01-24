@@ -1,6 +1,27 @@
 ﻿import { Icons } from "@/components/icons";
 import { HomeIcon, FileTextIcon } from "lucide-react";
-import type { ReactNode } from "react";
+import type { ComponentType, ReactNode } from "react";
+
+type HackathonLink = {
+  title: string;
+  href: string;
+  icon: ReactNode;
+};
+
+type Hackathon = {
+  title: string;
+  dates?: string;
+  location?: string;
+  description?: string;
+  image?: string;
+  links?: HackathonLink[];
+};
+
+type Skill = {
+  name: string;
+  icon: ComponentType<{ className?: string }> | null;
+  logoUrl: string;
+};
 
 export const DATA = {
   name: "Gena Emmanuel Bottarlini",
@@ -105,7 +126,7 @@ export const DATA = {
       icon: null,
       logoUrl: "https://cdn.simpleicons.org/swagger/85EA2D",
     },
-  ],
+  ] as Skill[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     {
@@ -372,16 +393,5 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [] as {
-    title: string;
-    dates: string;
-    location: string;
-    description: string;
-    image?: string;
-    links: {
-      icon: ReactNode;
-      title: string;
-      href: string;
-    }[];
-  }[],
+  hackathons: [] as Hackathon[],
 } as const;
