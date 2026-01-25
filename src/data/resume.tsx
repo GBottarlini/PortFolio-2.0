@@ -130,7 +130,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     {
-      href: "/BOTTARLNI-GENARO-CV.pdf",
+      href: "/Genaro_Bottarlini_CV.pdf",
       icon: FileTextIcon,
       label: "Curriculum",
     },
