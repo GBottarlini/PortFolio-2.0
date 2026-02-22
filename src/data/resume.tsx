@@ -245,6 +245,48 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Jamabag - Sitio Web & E-commerce",
+      href: "https://jamabag.com.ar/",
+      dates: "2024",
+      active: false,
+      description:
+        "Construí la presencia digital integral para una marca emergente implementando una solución B2B2C de e-commerce centrada en métricas comerciales, visibilidad de portfolio y flujo de consultas personalizadas.\n\n- Ingeniería B2C: Implementación modular en WordPress/WooCommerce superando restricciones directas de pasarelas de pago.\n- Emprendedurismo IT: Gestión integral SDLC freelance desde la toma de requerimientos, diseño conceptual y métricas SEO fundacionales hasta despliegue de DNS y hosting de alta disponibilidad.",
+      technologies: ["WordPress", "WooCommerce", "SEO", "Dominio y hosting"],
+      links: [
+        {
+          type: "Web",
+          href: "https://jamabag.com.ar/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://vimeo.com/1157919302?share=copy&fl=sv&fe=ci",
+    },
+    {
+      title: "Plataforma PriCut",
+      href: "https://www.pricut.com",
+      dates: "2024",
+      active: true,
+      description:
+        "Plataforma web de cotización instantánea para servicios de corte industrial (Router CNC, Láser de fibra, Láser CO2). Tomé un proyecto en estado no funcional y lo llevé a producción con un cotizador complejo en tiempo real.\n\n- Migración de Redux a Zustand para optimizar la gestión de estado.\n- Desarrollo escalable de componentes reutilizables en React.js y CSS puro, junto con automatización de pruebas con Vitest.\n- Integración con Figma (UI/UX) y trabajo colaborativo con Git Flow en un equipo de 6 developers.",
+      technologies: [
+        "React",
+        "Zustand",
+        "CSS",
+        "Python (Backend)",
+        "Vitest"
+      ],
+      links: [
+        {
+          type: "Web",
+          href: "https://www.pricut.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/pricut.png",
+      video: "",
+    },
+        {
       title: "CRM Interno - Nation",
       href: "https://gestionclientessa.netlify.app",
       dates: "Junio 2025",
@@ -271,24 +313,6 @@ export const DATA = {
       ],
       image: "https://i.ibb.co/21d6kPfT/nationSA.png",
       video: "",
-    },
-    {
-      title: "Jamabag - Sitio Web & E-commerce",
-      href: "https://jamabag.com.ar/",
-      dates: "2024",
-      active: false,
-      description:
-        "Construí la presencia digital integral para una marca emergente implementando una solución B2B2C de e-commerce centrada en métricas comerciales, visibilidad de portfolio y flujo de consultas personalizadas.\n\n- Ingeniería B2C: Implementación modular en WordPress/WooCommerce superando restricciones directas de pasarelas de pago.\n- Emprendedurismo IT: Gestión integral SDLC freelance desde la toma de requerimientos, diseño conceptual y métricas SEO fundacionales hasta despliegue de DNS y hosting de alta disponibilidad.",
-      technologies: ["WordPress", "WooCommerce", "SEO", "Dominio y hosting"],
-      links: [
-        {
-          type: "Web",
-          href: "https://jamabag.com.ar/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://vimeo.com/1157919302?share=copy&fl=sv&fe=ci",
     },
     {
       title: "Festival de Música - Sitio Web",
