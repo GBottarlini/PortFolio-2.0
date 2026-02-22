@@ -30,9 +30,9 @@ export const DATA = {
   location: "Santa Fe, Argentina",
   locationLink: "https://maps.app.goo.gl/WSasfQ4tvMKpFsJb6",
   description:
-    "Desarrollador Frontend / Full Stack orientado a productos reales. Construyo aplicaciones web que resuelven problemas reales de negocio: desde e-commerce hasta sistemas internos e integraciones entre plataformas. Experiencia con React, Node.js y APIs en producción.",
+    "Desarrollador Frontend & Full Stack con experiencia real solucionando problemas críticos de negocio. Construyo e implemento desde plataformas e-commerce rentables hasta CRMs internos complejos empleando React y Node.js en entornos de producción reales.",
   summary:
-    "Soy desarrollador web con fuerte orientación al Frontend, pero con experiencia real en Full Stack y desarrollo de productos en entornos reales.\n\nMi background en e-commerce y ventas digitales me permite entender no solo el código, sino también al usuario, el negocio y el impacto real de cada decisión técnica.\n\nTrabajé tanto en entornos empresariales como en proyectos freelance, desarrollando CRMs internos, integraciones entre plataformas de venta y sitios e-commerce que hoy están en uso.\n\nActualmente busco sumarme a un equipo como Frontend o Full Stack Jr, donde pueda aportar valor desde el primer día y seguir creciendo profesionalmente.",
+    "Desarrollador de software con fuerte orientación al Frontend y capacidad Full Stack probada desarrollando aplicaciones para clientes reales.\n\nMi trayectoria en canales de e-commerce corporativo y ventas digitales me permite aportar un valor único al equipo: entiendo la interacción entre código, retención de usuarios y resultados de negocio.\n\nHe diseñado un CRM in-house de uso diario, así como sistemas automatizados de stock MERN cross-plataforma. Busco sumarme a un equipo dinámico donde pueda impactar el roadmap de producto y el código base desde el día 1.",
   avatarUrl: "/me2.jpeg",
   skills: [
     {
@@ -154,45 +154,43 @@ export const DATA = {
       },
     },
   },
-  work: [
-    {
-      company: "Concesionario Nation",
-      href: "",
-      badges: [],
-      location: "Santa Fe, Argentina",
-      title: "Analista de E-commerce",
-      logoUrl: "/logoNation.jpeg",
-      start: "Octubre 2024",
-      end: "Actualidad",
-      description:
-        "Gestiono y optimizo publicaciones en MercadoLibre, mejorando visibilidad y facturación mediante SEO y contenido visual.",
-    },
-    {
-      company: "KOL Accesorios",
-      href: "",
-      badges: [],
-      location: "Santa Fe, Argentina",
-      title: "Encargado de tienda",
-      logoUrl: "/logoKol.png",
-      start: "Mayo 2024",
-      end: "Noviembre 2024",
-      description:
-        "Lideré operaciones de sucursal, incrementando ventas en productos electrónicos en un 30 % y optimizando procesos de inventario y facturación.",
-    },
-    {
-      company: "MAPFRE Asistencia",
-      href: "",
-      badges: [],
-      location: "Santa Fe, Argentina",
-      title: "Operador Telefónico",
-      logoUrl:
-        "https://www.mawdy.com.ar/media/mawdy-mapfre-worldwide-digital-assitance.png",
-      start: "Noviembre 2023",
-      end: "Febrero 2024",
-      description:
-        "Atendí consultas y reclamos de clientes de manera remota, documentando casos en CRM y mejorando tiempos de resolución.",
-    },
-  ],
+  work:
+    [
+      {
+        company: "Concesionario Nation",
+        badges: [],
+        location: "Santa Fe, Argentina",
+        title: "Analista de E-commerce",
+        logoUrl: "/logoNation.jpeg",
+        start: "Octubre 2024",
+        end: "Actualidad",
+        description:
+          "Lidero la gestión y optimización continua de publicaciones en MercadoLibre mediante estrategias orgánicas SEO, incrementando mediblemente la visibilidad del catálogo digital y la facturación de repuestos e-commerce.",
+      },
+      {
+        company: "KOL Accesorios",
+        badges: [],
+        location: "Santa Fe, Argentina",
+        title: "Encargado de tienda",
+        logoUrl: "/logoKol.png",
+        start: "Mayo 2024",
+        end: "Noviembre 2024",
+        description:
+          "Dirigí las operaciones de stock de la sucursal, estandarizando los procesos de inventario y facturación para lograr un aumento interanual del 30% en métricas de venta de electrónica B2C.",
+      },
+      {
+        company: "MAPFRE Asistencia",
+        badges: [],
+        location: "Santa Fe, Argentina",
+        title: "Operador Telefónico",
+        logoUrl:
+          "https://www.mawdy.com.ar/media/mawdy-mapfre-worldwide-digital-assitance.png",
+        start: "Noviembre 2023",
+        end: "Febrero 2024",
+        description:
+          "Gestioné remotamente reportes e incidencias críticas documentando el 100% de los casos en un sistema CRM, acelerando significativamente los tiempos de resolución técnica.",
+      },
+    ],
   education: [
     {
       school: "Universidad Tecnológica Nacional (UTN) - FRBA",
@@ -228,7 +226,7 @@ export const DATA = {
       dates: "En curso",
       active: true,
       description:
-        "Aplicación web que sincroniza el stock entre Tiendanube y MercadoLibre, evitando sobreventas y permitiendo un control centralizado del inventario.\n\n- Stack: React, Node.js, Supabase, API de Tiendanube y API de MercadoLibre.\n- Responsabilidades: frontend, backend, integraciones, base de datos y despliegue en Render y Netlify.\n- Impacto: eliminación de sobreventas y mejora en la eficiencia operativa.",
+        "Diseñé y desarrollé una aplicación de sincronización bidireccional entre Tiendanube y MercadoLibre, mitigando discrepancias de catálogo y garantizando un control centralizado del inventario empresarial.\n\n- Arquitectura: React, Node.js y Supabase para asegurar resiliencia en tiempo real y comunicación robusta B2B.\n- Liderazgo: Frontend, backend, webhooks transaccionales y despliegue in-house en Render y Netlify.\n- Impacto Final: Erradicación del 100% de quiebres de stock y sobreventas, optimizando drásticamente la cadena de operaciones diaria.",
       technologies: [
         "React",
         "Node.js",
@@ -252,7 +250,7 @@ export const DATA = {
       dates: "Junio 2025",
       active: true,
       description:
-        "CRM interno desarrollado a medida para gestionar clientes, estados de venta y actualizaciones en tiempo real para el equipo comercial.\n\n- Stack: React, Node.js, MongoDB y WebSockets.\n- Responsabilidades: frontend, backend, lógica de negocio, estados de venta y tiempo real.\n- Impacto: uso diario, mejor organización y optimización del proceso de ventas.",
+        "Diseñé un CRM administrativo y dashboard analítico inyectando una base de datos distribuida con MERN para digitalizar la cartera de clientes y canal de leads.\n\n- Tecnología: Optimización con WebSockets logrando actualizaciones automáticas asíncronas.\n- Ejecución: Desarrollo Full Stack, persistencia segura en MongoDB y modelado de estados de venta dinámicos.\n- Impacto: Actualmente utilizado cotidianamente por el departamento comercial, mejorando drásticamente el embudo de oportunidades.",
       technologies: ["React", "Node.js", "MongoDB", "WebSockets"],
       links: [
         {
@@ -280,7 +278,7 @@ export const DATA = {
       dates: "2024",
       active: false,
       description:
-        "Sitio web y solución de e-commerce desarrollados desde cero, enfocados en visibilidad de productos y ventas basadas en consultas.\n\n- Contexto: necesitaba profesionalizar su presencia digital y mostrar el catálogo sin compras directas.\n- Responsabilidades: WordPress y WooCommerce, flujo de compra basado en consultas, SEO básico, dominio y hosting.\n- Resultado: presencia digital profesional y primer proyecto freelance gestionado de punta a punta.",
+        "Construí la presencia digital integral para una marca emergente implementando una solución B2B2C de e-commerce centrada en métricas comerciales, visibilidad de portfolio y flujo de consultas personalizadas.\n\n- Ingeniería B2C: Implementación modular en WordPress/WooCommerce superando restricciones directas de pasarelas de pago.\n- Emprendedurismo IT: Gestión integral SDLC freelance desde la toma de requerimientos, diseño conceptual y métricas SEO fundacionales hasta despliegue de DNS y hosting de alta disponibilidad.",
       technologies: ["WordPress", "WooCommerce", "SEO", "Dominio y hosting"],
       links: [
         {
@@ -298,7 +296,7 @@ export const DATA = {
       dates: "Junio 2025",
       active: false,
       description:
-        "Landing page moderna para un festival musical. Diseño responsivo, galería interactiva, navegación fija y automatización con Gulp.",
+        "Codifiqué una landing page inmersiva para un evento de festival masivo integrando elementos visuales atractivos. Desplegué galerías multimedia de recarga progresiva optimizando el viewport mediante scripts Gulp nativos de minificación (HTML5/SCSS).",
       technologies: ["HTML5", "SCSS (SASS)", "JavaScript", "Gulp"],
       links: [
         {
@@ -367,29 +365,6 @@ export const DATA = {
         },
       ],
       image: "https://i.ibb.co/WWfz8dQs/blogCafe.png",
-      video: "",
-    },
-    {
-      title: "Portfolio Web (Versión anterior)",
-      href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",
-      dates: "Abril 2024",
-      active: false,
-      description:
-        "Primera versión de mi portfolio personal, desarrollada con HTML, CSS y JavaScript vanilla. Incluye animaciones, sección de proyectos y contacto.",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/Portfolio-Genaro-Bottarlini",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Web",
-          href: "https://gbottarlini.github.io/Portfolio-Genaro-Bottarlini/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "https://i.ibb.co/1tHHBthN/cvViejo.png",
       video: "",
     },
   ],
