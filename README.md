@@ -1,28 +1,29 @@
-# PortFolio 2.0 – Genaro Bottarlini 💻
+# Portfolio profesional — Genaro Bottarlini
 
-🎯 Este es mi portfolio profesional como desarrollador web Full Stack. Incluye mis proyectos destacados, tecnologías que manejo, experiencia laboral, formación académica y acceso a mi CV actualizado.
+Portfolio orientado a oportunidades Full Stack, Frontend y Backend. Presenta experiencia laboral, formación y proyectos reales desarrollados para empresas, clientes y organismos públicos.
 
-🔗 **Demo online**: [https://portfolio-genaro.vercel.app](https://portfolio-bottarlini.vercel.app)  
+🔗 **Demo online**: [https://portfolio-bottarlini.vercel.app](https://portfolio-bottarlini.vercel.app)
 📄 **Descargar CV**: [Ver PDF](https://portfolio-bottarlini.vercel.app/Genaro_Bottarlini_CV.pdf)
 
 ---
 
 ## 🚀 Tecnologías utilizadas
 
-- **Next.js** + **React**
-- **Tailwind CSS**
+- **Next.js 16** + **React 19**
+- **Tailwind CSS 4**
 - **TypeScript**
 - **Lucide Icons**
-- **Framer Motion**
+- **Motion**
 - **pnpm**
 
 ---
 
 ## 🧩 Funcionalidades
 
-- Vista responsiva y animada
+- Vista responsiva con soporte para preferencias de movimiento reducido
 - Navegación fluida entre secciones
-- Sección de proyectos destacados con imágenes y links
+- Proyectos destacados con imágenes, enlaces y contexto profesional
+- Metadata social, sitemap, robots y datos estructurados
 - CV descargable
 - Información sobre experiencia y educación
 - Diseño limpio y profesional
@@ -31,8 +32,19 @@
 
 ## 📦 Instalación local
 
+Requisitos: Node.js 20.9 o superior y pnpm.
+
 ```bash
 git clone https://github.com/GBottarlini/PortFolio-2.0.git
 cd PortFolio-2.0
 pnpm install
 pnpm dev
+```
+
+## ✅ Verificación
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+```
