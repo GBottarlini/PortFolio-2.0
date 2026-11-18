@@ -25,7 +25,7 @@ S8. Correct the approved technical findings: canonical site metadata, Open Graph
 
 - T1 — S2-S7 — `inline` (no writer trigger; one coherent content/privacy work unit) — **completed** — Commit: `d05788d` — Risk: item 2, removed potentially sensitive CRM media and public access paths.
 - T2 — S8 — `inline` (no writer trigger; cohesive SEO/accessibility/performance work unit) — **completed** — Commit: `a40efff` — Risk: item 6, no browser regression tests cover semantic, motion, metadata, or responsive behavior.
-- T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `chore(portfolio): align project tooling` (hash recorded after commit) — Risk: none; cleanup and verification commands do not alter product behavior.
+- T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
 
 ## Log
 
@@ -42,3 +42,5 @@ L5 — 2026-11-17 — T1 completed. Replaced the CRM deployment/screenshot with 
 L6 — 2026-11-17 — T2 completed. Corrected canonical/OG metadata, added sitemap, robots and Person JSON-LD, introduced a semantic H1 and accessible control names, guarded empty education links, honored reduced-motion preferences, improved media loading, aligned Node with Next 16, and tightened mobile contact spacing. The user authorized `pnpm install --frozen-lockfile` from the public npm registry and `.next/**` build output. Final checks passed: `pnpm lint`, `pnpm exec tsc --noEmit`, `pnpm build`, and parent spot-check `pnpm exec tsc --noEmit`. Independent item-6 verification found no code blocker; browser-level reduced-motion and narrow-viewport checks remain part of T3.
 
 L7 — 2026-11-17 — T3 completed. Removed the empty legacy ESLint config, aligned the shadcn Tailwind 4 locator, added `typecheck`/`check` scripts, and updated README stack, URL, requirements and verification commands. `pnpm check` passed; a trailing-space finding was fixed in the one correction batch; targeted `git diff --check`, parent `pnpm typecheck`, and a production-server smoke test for `/`, `/robots.txt`, `/sitemap.xml`, H1, canonical metadata and JSON-LD all passed. No visual browser runner was available, so reduced-motion hydration and 320px visual layout remain recommended manual checks rather than claimed evidence.
+
+L8 — 2026-11-17 — Feature implementation closed locally with commits `d05788d`, `a40efff`, and `233edc7`. Receipt-driven review remained disabled by the user's global preference, so delivery is `disabled/unmanaged`; no push or pull request was performed.
