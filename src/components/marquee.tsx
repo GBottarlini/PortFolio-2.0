@@ -35,8 +35,8 @@ export function Marquee({
             index === 0
               ? "motion-reduce:w-full motion-reduce:min-w-0 motion-reduce:shrink motion-reduce:flex-wrap motion-reduce:justify-start motion-reduce:pr-0"
               : "motion-reduce:hidden",
-            pauseOnHover &&
-              "group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused]",
+            "group-focus-within:[animation-play-state:paused]",
+            pauseOnHover && "group-hover:[animation-play-state:paused]",
             reverse && "[animation-direction:reverse]"
           )}
         >

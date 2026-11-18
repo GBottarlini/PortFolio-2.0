@@ -25,7 +25,9 @@ S9. Add the Viavervit logo supplied by the user: “te brindo el logo de viaverv
 
 S10. Replace the illustrative Fiscalía and CRM media with the user-provided screenshots: “te dejo tambien una imagen del proyecto de Fiscalia” and “tambien del crm que hice para nation solo tiene la pantalla inicial sin clientes ni datos ni nada”. Use the original Viavervit logo file supplied in `public/`.
 
-S11. Modernize the technologies section following the user request: “me gustaria agregar algunas tegnologias mas de las que usamos actualmente y me gustaria que tenga un diseño de que vayan pasando asi no queda tan estatico y tiene un poco mas de onda, similar a este componente”. Add only technologies evidenced by the portfolio, use a horizontally animated marquee, pause it on hover, and disable movement when reduced motion is requested.
+S11. Modernize the technologies section following the user request: “me gustaria agregar algunas tegnologias mas de las que usamos actualmente y me gustaria que tenga un diseño de que vayan pasando asi no queda tan estatico y tiene un poco mas de onda, similar a este componente”. Add only technologies evidenced by the portfolio, use a continuously moving horizontal marquee that does not stop when hovered, preserve a keyboard pause mechanism, and disable movement when reduced motion is requested.
+
+S12. Prevent the Next.js development overlay caused when a browser extension injects `cz-shortcut-listen="true"` into the root `<body>` before hydration, without suppressing hydration diagnostics in the rest of the application.
 
 ## Tasks
 
@@ -34,7 +36,8 @@ S11. Modernize the technologies section following the user request: “me gustar
 - T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
 - T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: `a7b5536` — Risk: none; visual asset only.
 - T5 — S10 — `inline` (small verified media replacement) — **completed** — Commit: `06531fb` — Risk: item 2; the published CRM screenshot was independently verified to contain no client records or populated personal data.
-- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commit: `06531fb` — Risk: item 6; structural, accessibility, reduced-motion, lint, typecheck, and build checks passed; browser-level visual inspection remains manual.
+- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commit: `06531fb` + pending correction — Risk: item 6; continuous motion, keyboard pause, and reduced-motion behavior passed structural and independent verification; browser observation remains manual.
+- T7 — S12 — `inline` (targeted hydration-noise suppression) — **completed** — Commit: pending — Risk: none; suppression is scoped to the extension-mutated `<body>` element and applies one DOM level deep.
 
 ## Log
 
@@ -65,3 +68,9 @@ L12 — 2026-11-18 — User request: “En este apartado me gustaria agregar alg
 L13 — 2026-11-18 — T5 completed. Replaced the illustrative Fiscalía and CRM SVGs with the supplied PNG captures, replaced the reconstructed Viavervit SVG with the supplied JPEG, removed the Windows Zone.Identifier sidecar, and corrected the CRM availability copy. `pnpm check` passed. Independent item-2 verification confirmed no names, contact details, VINs, license plates, client rows, or populated customer data; its one stale-copy blocker was corrected and the targeted recheck passed.
 
 L14 — 2026-11-18 — T6 completed. Added verified TypeScript, Next.js, Tailwind CSS, WebSockets, and Recharts skills; clarified PostgreSQL; and replaced the static pills with a reusable two-row marquee that reverses direction, pauses on hover or keyboard focus, suppresses duplicate screen-reader announcements, and wraps without animation under reduced motion. `pnpm check`, post-correction lint, and typecheck passed. Independent item-6 verification found two accessibility blockers; two bounded corrections fixed reduced-motion width/clipping and focus semantics, and the final targeted recheck passed. Browser-level animation and narrow-layout appearance remain a manual visual check.
+
+L15 — 2026-11-18 — User-reported failure: “el unico detalle esto no se mueve esta estatico”. Reproduction found the technologies section explicitly passed `pauseOnHover`, so observing it with the pointer over the marquee stopped every track. A focused structural probe failed before correction with `RED: technologies marquee pauses while hovered`.
+
+L16 — 2026-11-18 — User supplied a Next.js hydration overlay showing `cz-shortcut-listen="true"` injected into `<body>`. This attribute is absent from the application source and is added by a browser extension before hydration; the fix is scoped to the body-level mismatch.
+
+L17 — 2026-11-18 — T6/T7 correction completed. Removed pointer-hover pause while retaining keyboard-focus pause and the reduced-motion fallback. Added `suppressHydrationWarning` only to `<body>`; `<html>` already had the same root-level protection. The focused GREEN probe, `pnpm lint`, and `pnpm typecheck` passed. `pnpm check` reached the build but the active/stale Next.js development output failed to resolve `@vercel/turbopack-next/internal/font/google/font`; this was recorded as an environmental failure, not a pass. Independent item-6 verification passed S11 and S12 with no blockers; manual browser observation remains pending after restarting the stale dev server.

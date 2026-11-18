@@ -146,7 +146,6 @@ export default function Page() {
                   <Marquee
                     key={row}
                     reverse={row === 1}
-                    pauseOnHover
                     repeat={3}
                     aria-label={`Tecnologías utilizadas, fila ${row + 1}`}
                   >
