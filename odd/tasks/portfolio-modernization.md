@@ -36,7 +36,7 @@ S12. Prevent the Next.js development overlay caused when a browser extension inj
 - T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
 - T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: `a7b5536` — Risk: none; visual asset only.
 - T5 — S10 — `inline` (small verified media replacement) — **completed** — Commit: `06531fb` — Risk: item 2; the published CRM screenshot was independently verified to contain no client records or populated personal data.
-- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commits: `06531fb`, `6254155` + pending correction — Risk: item 6; active Next.js development CSS and independent verification confirm a valid running animation declaration; browser observation remains manual.
+- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commits: `06531fb`, `6254155`, `be4d60e` — Risk: item 6; active Next.js development CSS and independent verification confirm a valid running animation declaration; browser observation remains manual.
 - T7 — S12 — `inline` (targeted hydration-noise suppression) — **completed** — Commit: `6254155` — Risk: none; suppression is scoped to the extension-mutated `<body>` element and applies one DOM level deep.
 
 ## Log
