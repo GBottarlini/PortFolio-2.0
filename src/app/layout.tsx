@@ -23,17 +23,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} | Desarrollador Full Stack`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Desarrollador Full Stack`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `Portfolio de ${DATA.name}`,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -47,13 +58,27 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Desarrollador Full Stack`,
+    description: DATA.description,
     card: "summary_large_image",
+    images: ["/opengraph-image"],
   },
-  verification: {
-    google: "",
-    yandex: "",
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: DATA.name,
+  url: DATA.url,
+  image: new URL(DATA.avatarUrl, DATA.url).toString(),
+  jobTitle: "Desarrollador Full Stack",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Santa Fe",
+    addressCountry: "AR",
   },
+  sameAs: Object.values(DATA.contact.social).map((social) => social.url),
+  knowsAbout: DATA.skills.map((skill) => skill.name),
 };
 
 export default function RootLayout({
@@ -70,6 +95,12 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">

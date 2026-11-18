@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
+import { useReducedMotion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Markdown from "react-markdown";
 
 function getVimeoEmbedUrl(url: string) {
@@ -16,23 +16,6 @@ function getVimeoEmbedUrl(url: string) {
 
   const id = match[1];
   return `https://player.vimeo.com/video/${id}?autoplay=1&loop=1&muted=1&background=1&byline=0&title=0&portrait=0`;
-}
-
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
-  const [imageError, setImageError] = useState(false);
-
-  if (!src || imageError) {
-    return <div className="w-full h-44 bg-muted" />;
-  }
-
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className="w-full h-44 object-cover"
-      onError={() => setImageError(true)}
-    />
-  );
 }
 
 interface Props {
@@ -64,6 +47,8 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div
       className={cn(
@@ -85,12 +70,17 @@ export function ProjectCard({
             (() => {
               const vimeoUrl = getVimeoEmbedUrl(video);
               if (vimeoUrl) {
-                return (
+                return shouldReduceMotion ? (
+                  <div className="flex h-44 items-center justify-center bg-muted px-6 text-center text-sm text-muted-foreground">
+                    Vista previa en video disponible en el sitio del proyecto
+                  </div>
+                ) : (
                   <div className="relative w-full h-44 overflow-hidden">
                     <iframe
                       src={vimeoUrl}
                       title={`${title} video`}
                       allow="autoplay; fullscreen; picture-in-picture"
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full pointer-events-none scale-105"
                     />
                   </div>
@@ -98,25 +88,25 @@ export function ProjectCard({
               }
 
               return (
-                <video
-                  src={video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                  <video
+                    src={video}
+                    autoPlay={!shouldReduceMotion}
+                    loop
+                    muted
+                    playsInline
+                    preload="none"
                   className="w-full h-44 object-cover"
                 />
               );
             })()
           ) : image ? (
             <div className="relative w-full h-44 overflow-hidden">
-              <img
+              <Image
                 src={image}
                 alt={title}
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover group-hover:scale-[1.03] motion-reduce:transform-none transition-transform duration-500 ease-out"
               />
             </div>
           ) : (
@@ -164,7 +154,7 @@ export function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm shrink-0 mt-0.5"
-            aria-label={`Open ${title}`}
+            aria-label={`Abrir ${title}`}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>

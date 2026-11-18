@@ -1,10 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, Variants } from "motion/react";
+import { motion, useReducedMotion, Variants } from "motion/react";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
+  as?: "div" | "h1" | "p";
   text: string;
   className?: string;
   variant?: {
@@ -18,6 +19,7 @@ interface BlurFadeTextProps {
   animateByCharacter?: boolean;
 }
 const BlurFadeText = ({
+  as = "div",
   text,
   className,
   variant,
@@ -27,6 +29,8 @@ const BlurFadeText = ({
   yOffset = 8,
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
+  const shouldReduceMotion = useReducedMotion();
+  const MotionElement = as === "h1" ? motion.h1 : as === "p" ? motion.p : motion.div;
   const defaultVariants: Variants = {
     hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
     visible: { y: 0, opacity: 1, filter: "blur(0px)" },
@@ -36,7 +40,7 @@ const BlurFadeText = ({
 
   if (animateByCharacter) {
     return (
-      <div className="flex">
+      <MotionElement className={cn("flex", className)}>
         {characters.map((char, i) => {
           const charVariants: Variants = {
             hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
@@ -45,41 +49,43 @@ const BlurFadeText = ({
           return (
             <motion.span
               key={i}
-              initial="hidden"
+              initial={shouldReduceMotion ? false : "hidden"}
               animate="visible"
               variants={charVariants}
               transition={{
-                duration,
-                delay: delay + i * characterDelay,
+                duration: shouldReduceMotion ? 0 : duration,
+                delay: shouldReduceMotion ? 0 : delay + i * characterDelay,
                 ease: "easeOut",
               }}
-              className={cn("inline-block", className)}
+              className="inline-block"
               style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
             >
               {char}
             </motion.span>
           );
         })}
-      </div>
+      </MotionElement>
     );
   }
 
   return (
-    <div className="flex">
-      <motion.span
-        initial="hidden"
-        animate="visible"
-        variants={combinedVariants}
-        transition={{
-          duration,
-          delay,
-          ease: "easeOut",
-        }}
-        className={cn("inline-block", className)}
+    <MotionElement
+      initial={shouldReduceMotion ? false : "hidden"}
+      animate="visible"
+      variants={combinedVariants}
+      transition={{
+        duration: shouldReduceMotion ? 0 : duration,
+        delay: shouldReduceMotion ? 0 : delay,
+        ease: "easeOut",
+      }}
+      className={cn("flex", className)}
+    >
+      <span
+        className="inline-block"
       >
         {text}
-      </motion.span>
-    </div>
+      </span>
+    </MotionElement>
   );
 };
 

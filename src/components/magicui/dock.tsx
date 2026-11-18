@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, type MotionValue, useMotionValue, useSpring, useTransform } from "motion/react";
+import { motion, type MotionValue, useMotionValue, useReducedMotion, useSpring, useTransform } from "motion/react";
 import { createContext, useContext, useRef, type ReactNode } from "react";
 
 interface DockProps {
@@ -50,6 +50,7 @@ const Dock = ({ className, children, magnification = DEFAULT_MAGNIFICATION, dist
 const DockIcon = ({ className, children }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const context = useContext(DockContext);
+  const shouldReduceMotion = useReducedMotion();
 
   if (!context) {
     throw new Error("DockIcon must be used within a Dock component");
@@ -74,11 +75,17 @@ const DockIcon = ({ className, children }: DockIconProps) => {
   return (
     <motion.div
       ref={ref}
-      style={{ width: containerSize, height: containerSize }}
+      style={{
+        width: shouldReduceMotion ? BASE_SIZE : containerSize,
+        height: shouldReduceMotion ? BASE_SIZE : containerSize,
+      }}
       className={cn("relative flex aspect-square items-center justify-center rounded-full shrink-0", className)}
     >
       <motion.div
-        style={{ width: iconSize, height: iconSize }}
+        style={{
+          width: shouldReduceMotion ? BASE_ICON_SIZE : iconSize,
+          height: shouldReduceMotion ? BASE_ICON_SIZE : iconSize,
+        }}
         className="flex items-center justify-center"
       >
         {children}

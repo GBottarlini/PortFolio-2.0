@@ -1,4 +1,5 @@
 ﻿import { Icons } from "@/components/icons";
+import { SITE_URL } from "@/lib/site";
 import { HomeIcon, FileTextIcon } from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 
@@ -26,7 +27,7 @@ type Skill = {
 export const DATA = {
   name: "Genaro Emmanuel Bottarlini",
   initials: "GB",
-  url: "https://www.linkedin.com/in/genarobottarlini/",
+  url: SITE_URL,
   location: "Santa Fe, Argentina",
   locationLink: "https://maps.app.goo.gl/WSasfQ4tvMKpFsJb6",
   description:
