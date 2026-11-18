@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Vista ilustrativa del CRM de Nation</title>
+  <desc id="desc">Panel ficticio con métricas, estados comerciales y una tabla sin datos personales.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" rx="28" fill="url(#bg)"/>
+  <rect x="24" y="24" width="912" height="54" rx="14" fill="#ffffff" fill-opacity=".08"/>
+  <circle cx="52" cy="51" r="8" fill="#fb7185"/>
+  <circle cx="78" cy="51" r="8" fill="#fbbf24"/>
+  <circle cx="104" cy="51" r="8" fill="#4ade80"/>
+  <rect x="140" y="42" width="190" height="18" rx="9" fill="#ffffff" fill-opacity=".16"/>
+  <text x="48" y="122" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700">CRM Nation · Demo ilustrativa</text>
+  <g transform="translate(48 150)">
+    <g>
+      <rect width="196" height="92" rx="16" fill="#ffffff" fill-opacity=".08"/>
+      <text x="20" y="32" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Nuevos contactos</text>
+      <text x="20" y="68" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">24</text>
+    </g>
+    <g transform="translate(216)">
+      <rect width="196" height="92" rx="16" fill="#ffffff" fill-opacity=".08"/>
+      <text x="20" y="32" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">En seguimiento</text>
+      <text x="20" y="68" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">18</text>
+    </g>
+    <g transform="translate(432)">
+      <rect width="196" height="92" rx="16" fill="#ffffff" fill-opacity=".08"/>
+      <text x="20" y="32" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Contactados</text>
+      <text x="20" y="68" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">31</text>
+    </g>
+    <g transform="translate(648)">
+      <rect width="196" height="92" rx="16" fill="#ffffff" fill-opacity=".08"/>
+      <text x="20" y="32" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Oportunidades</text>
+      <text x="20" y="68" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">12</text>
+    </g>
+  </g>
+  <rect x="48" y="266" width="864" height="206" rx="18" fill="#ffffff" fill-opacity=".06"/>
+  <rect x="72" y="290" width="816" height="36" rx="9" fill="url(#accent)" fill-opacity=".24"/>
+  <g fill="#cbd5e1">
+    <rect x="88" y="304" width="128" height="9" rx="4.5"/>
+    <rect x="300" y="304" width="104" height="9" rx="4.5"/>
+    <rect x="500" y="304" width="92" height="9" rx="4.5"/>
+    <rect x="716" y="304" width="108" height="9" rx="4.5"/>
+  </g>
+  <g fill="#ffffff" fill-opacity=".13">
+    <rect x="72" y="342" width="816" height="30" rx="8"/>
+    <rect x="72" y="382" width="816" height="30" rx="8"/>
+    <rect x="72" y="422" width="816" height="30" rx="8"/>
+  </g>
+</svg>

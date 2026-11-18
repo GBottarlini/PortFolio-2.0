@@ -10,6 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -77,11 +78,22 @@ export default function WorkSection() {
             </div>
           </AccordionTrigger>
           <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
-            {work.description}
+            <div className="grid gap-2">
+              <p>{work.description}</p>
+              {work.href ? (
+                <Link
+                  href={work.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit font-medium text-foreground underline underline-offset-4"
+                >
+                  Ver sitio de {work.company}
+                </Link>
+              ) : null}
+            </div>
           </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>
   );
 }
-

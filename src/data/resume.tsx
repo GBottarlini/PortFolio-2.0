@@ -24,15 +24,15 @@ type Skill = {
 };
 
 export const DATA = {
-  name: "Gena Emmanuel Bottarlini",
+  name: "Genaro Emmanuel Bottarlini",
   initials: "GB",
   url: "https://www.linkedin.com/in/genarobottarlini/",
   location: "Santa Fe, Argentina",
   locationLink: "https://maps.app.goo.gl/WSasfQ4tvMKpFsJb6",
   description:
-    "Desarrollador Frontend & Full Stack con experiencia real solucionando problemas críticos de negocio. Construyo e implemento desde plataformas e-commerce rentables hasta CRMs internos complejos empleando React y Node.js en entornos de producción reales.",
+    "Desarrollador Full Stack con experiencia en Frontend y Backend. Creo aplicaciones web, APIs, automatizaciones e integraciones con React y Node.js para resolver necesidades reales de negocio.",
   summary:
-    "Desarrollador de software con fuerte orientación al Frontend y capacidad Full Stack probada desarrollando aplicaciones para clientes reales.\n\nMi trayectoria en canales de e-commerce corporativo y ventas digitales me permite aportar un valor único al equipo: entiendo la interacción entre código, retención de usuarios y resultados de negocio.\n\nHe diseñado un CRM in-house de uso diario, así como sistemas automatizados de stock MERN cross-plataforma. Busco sumarme a un equipo dinámico donde pueda impactar el roadmap de producto y el código base desde el día 1.",
+    "Desarrollador de software con experiencia construyendo soluciones Full Stack para empresas, organismos públicos y clientes independientes. Trabajo tanto en frontend como en backend, desde el diseño de interfaces y APIs hasta integraciones, automatizaciones y despliegues.\n\nEn Concesionario Nation desarrollé un integrador de stock entre Mercado Libre y Tiendanube y un CRM interno para el equipo comercial. También participé como desarrollador frontend en PriCut junto a Viavervit y soy cofundador de CodingFlash, una agencia de software y soluciones digitales.\n\nBusco oportunidades como desarrollador Full Stack, Frontend o Backend donde pueda combinar criterio técnico, conocimiento de negocio y foco en productos utilizados en contextos reales.",
   avatarUrl: "/me2.jpeg",
   skills: [
     {
@@ -154,43 +154,57 @@ export const DATA = {
       },
     },
   },
-  work:
-    [
-      {
-        company: "Concesionario Nation",
-        badges: [],
-        location: "Santa Fe, Argentina",
-        title: "Analista de E-commerce",
-        logoUrl: "/logoNation.jpeg",
-        start: "Octubre 2024",
-        end: "Actualidad",
-        description:
-          "Lidero la gestión y optimización continua de publicaciones en MercadoLibre mediante estrategias orgánicas SEO, incrementando mediblemente la visibilidad del catálogo digital y la facturación de repuestos e-commerce.",
-      },
-      {
-        company: "KOL Accesorios",
-        badges: [],
-        location: "Santa Fe, Argentina",
-        title: "Encargado de tienda",
-        logoUrl: "/logoKol.png",
-        start: "Mayo 2024",
-        end: "Noviembre 2024",
-        description:
-          "Dirigí las operaciones de stock de la sucursal, estandarizando los procesos de inventario y facturación para lograr un aumento interanual del 30% en métricas de venta de electrónica B2C.",
-      },
-      {
-        company: "MAPFRE Asistencia",
-        badges: [],
-        location: "Santa Fe, Argentina",
-        title: "Operador Telefónico",
-        logoUrl:
-          "https://www.mawdy.com.ar/media/mawdy-mapfre-worldwide-digital-assitance.png",
-        start: "Noviembre 2023",
-        end: "Febrero 2024",
-        description:
-          "Gestioné remotamente reportes e incidencias críticas documentando el 100% de los casos en un sistema CRM, acelerando significativamente los tiempos de resolución técnica.",
-      },
-    ],
+  work: [
+    {
+      company: "Concesionario Nation",
+      badges: [],
+      location: "Santa Fe, Argentina",
+      title: "Analista de E-commerce & Desarrollador",
+      href: "",
+      logoUrl: "/logoNation.jpeg",
+      start: "Octubre 2024",
+      end: "Actualidad",
+      description:
+        "Gestiono y optimizo las operaciones de Mercado Libre y Tiendanube: publicaciones, SEO de catálogo, campañas de Product Ads y compra de mercadería a fábrica. También analizo procesos para detectar oportunidades de automatización. Como desarrollador Full Stack diseñé e implementé el integrador de stock multicanal y el CRM interno que utiliza el equipo comercial.",
+    },
+    {
+      company: "CodingFlash",
+      badges: [],
+      location: "Argentina · Remoto",
+      title: "Co-Fundador & Full Stack Developer",
+      href: "https://codingflash.com/",
+      logoUrl:
+        "https://res.cloudinary.com/deagvpc2p/image/upload/v1770486714/Logotipo_Fondo_bgk6ah.png",
+      start: "Abril 2025",
+      end: "Actualidad",
+      description:
+        "Cofundé CodingFlash para desarrollar soluciones que ayuden a empresas y emprendimientos a mejorar su presencia digital y optimizar procesos. Participo en la planificación y ejecución técnica de sitios web, aplicaciones a medida, APIs, automatizaciones, integraciones e infraestructura, trabajando principalmente con React, JavaScript y Node.js.",
+    },
+    {
+      company: "Viavervit",
+      badges: [],
+      location: "Argentina · Remoto",
+      title: "Desarrollador Frontend (React.js) · Freelance",
+      href: "",
+      logoUrl: "",
+      start: "Marzo 2025",
+      end: "Agosto 2025",
+      description:
+        "Trabajé en el frontend de PriCut, una plataforma de cotización online para piezas de MDF, acrílico y acero. Construí componentes reutilizables con React y CSS a partir de Figma, implementé funcionalidades, corregí errores y sumé pruebas con Vitest. Colaboré en un equipo remoto de seis desarrolladores usando Trello, Git Flow, GitHub y GitLab.",
+    },
+    {
+      company: "KOL Accesorios",
+      badges: [],
+      location: "Santa Fe, Argentina",
+      title: "Encargado de tienda",
+      href: "",
+      logoUrl: "/logoKol.png",
+      start: "Mayo 2024",
+      end: "Noviembre 2024",
+      description:
+        "Coordiné la operación diaria de la sucursal, el control de inventario, la facturación y la atención comercial en un entorno B2C.",
+    },
+  ],
   education: [
     {
       school: "Universidad Tecnológica Nacional (UTN) - FRBA",
@@ -221,23 +235,42 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Integrador de Stock - Nation",
-      href: "https://github.com/GBottarlini/IntegradorML",
-      dates: "En curso",
+      title: "Dashboard de Consumo · Fiscalía de Estado",
+      href: "https://github.com/GBottarlini/Fiscalia",
+      dates: "Proyecto institucional",
       active: true,
       description:
-        "Diseñé y desarrollé una aplicación de sincronización bidireccional entre Tiendanube y MercadoLibre, mitigando discrepancias de catálogo y garantizando un control centralizado del inventario empresarial.\n\n- Arquitectura: React, Node.js y Supabase para asegurar resiliencia en tiempo real y comunicación robusta B2B.\n- Liderazgo: Frontend, backend, webhooks transaccionales y despliegue in-house en Render y Netlify.\n- Impacto Final: Erradicación del 100% de quiebres de stock y sobreventas, optimizando drásticamente la cadena de operaciones diaria.",
+        "Desarrollé una plataforma para la Fiscalía de Estado de la Provincia de Santa Fe que permite visualizar y administrar el consumo de resmas por oficina. Incluye autenticación, carga mensual protegida, indicadores, comparaciones entre períodos y trazabilidad de la información.\n\n**Rol:** desarrollo Full Stack del frontend en React y la API en Express.\n\n**Disponibilidad:** el repositorio contiene código y datos de demostración; la información operativa no se publica.",
+      technologies: ["React", "Express", "JWT", "Netlify", "Recharts"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/GBottarlini/Fiscalia",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/fiscalia-dashboard.svg",
+      video: "",
+    },
+    {
+      title: "Integrador de Stock Multicanal · Nation",
+      href: "https://github.com/GBottarlini/Multi-Channel-Inventory-Sync",
+      dates: "2025 - Actualidad",
+      active: true,
+      description:
+        "Diseñé y desarrollé para Concesionario Nation un sistema que centraliza el inventario de Mercado Libre y Tiendanube. Cada venta o modificación actualiza el stock y lo refleja en ambos canales mediante APIs y webhooks, evitando inconsistencias y tareas manuales.\n\n**Rol:** desarrollo Full Stack completo, arquitectura, integraciones, modelo de datos y flujo operativo.\n\n**Disponibilidad:** el código puede consultarse; la integración productiva y sus credenciales son privadas.",
       technologies: [
         "React",
         "Node.js",
+        "Express",
         "Supabase",
-        "API de Tiendanube",
-        "API de MercadoLibre",
+        "PostgreSQL",
+        "Webhooks",
       ],
       links: [
         {
           type: "GitHub",
-          href: "https://github.com/GBottarlini/IntegradorML",
+          href: "https://github.com/GBottarlini/Multi-Channel-Inventory-Sync",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -245,13 +278,36 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Jamabag - Sitio Web & E-commerce",
+      title: "CRM Interno · Nation",
+      href: "https://github.com/GBottarlini/crm-frontend",
+      dates: "2025",
+      active: true,
+      description:
+        "Construí una aplicación interna para que el equipo comercial pueda buscar clientes con mayor rapidez, cruzar información de clientes y vehículos, gestionar estados de seguimiento en tiempo real y prevenir contactos duplicados.\n\n**Rol:** desarrollo Full Stack completo con React, Node.js, Express, MongoDB y WebSockets.\n\n**Disponibilidad:** no hay demo pública; la imagen es ilustrativa y no contiene datos productivos.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "WebSockets"],
+      links: [
+        {
+          type: "Frontend",
+          href: "https://github.com/GBottarlini/crm-frontend",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Backend",
+          href: "https://github.com/GBottarlini/backNation",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/crm-dashboard.svg",
+      video: "",
+    },
+    {
+      title: "Jamabag · E-commerce",
       href: "https://jamabag.com.ar/",
       dates: "2024",
-      active: false,
+      active: true,
       description:
-        "Construí la presencia digital integral para una marca emergente implementando una solución B2B2C de e-commerce centrada en métricas comerciales, visibilidad de portfolio y flujo de consultas personalizadas.\n\n- Ingeniería B2C: Implementación modular en WordPress/WooCommerce superando restricciones directas de pasarelas de pago.\n- Emprendedurismo IT: Gestión integral SDLC freelance desde la toma de requerimientos, diseño conceptual y métricas SEO fundacionales hasta despliegue de DNS y hosting de alta disponibilidad.",
-      technologies: ["WordPress", "WooCommerce", "SEO", "Dominio y hosting"],
+        "Creé un e-commerce para un cliente utilizando WordPress y WooCommerce, adaptando catálogo, navegación, consultas y operación comercial a sus requerimientos concretos. También trabajé en dominio, hosting, configuración y bases de SEO.\n\n**Rol:** relevamiento, implementación, personalización y puesta en producción.\n\n**Disponibilidad:** el sitio público puede visitarse; la operación administrativa del cliente es privada.",
+      technologies: ["WordPress", "WooCommerce", "SEO", "Hosting"],
       links: [
         {
           type: "Web",
@@ -263,19 +319,13 @@ export const DATA = {
       video: "https://vimeo.com/1157919302?share=copy&fl=sv&fe=ci",
     },
     {
-      title: "Plataforma PriCut",
+      title: "PriCut · Cotización de cortes industriales",
       href: "https://www.pricut.com",
-      dates: "2024",
+      dates: "Marzo - Agosto 2025",
       active: true,
       description:
-        "Plataforma web de cotización instantánea para servicios de corte industrial (Router CNC, Láser de fibra, Láser CO2). Tomé un proyecto en estado no funcional y lo llevé a producción con un cotizador complejo en tiempo real.\n\n- Migración de Redux a Zustand para optimizar la gestión de estado.\n- Desarrollo escalable de componentes reutilizables en React.js y CSS puro, junto con automatización de pruebas con Vitest.\n- Integración con Figma (UI/UX) y trabajo colaborativo con Git Flow en un equipo de 6 developers.",
-      technologies: [
-        "React",
-        "Zustand",
-        "CSS",
-        "Python (Backend)",
-        "Vitest"
-      ],
+        "Participé junto a Viavervit en el desarrollo de PriCut, una plataforma que genera cotizaciones de corte para MDF, acrílico y acero a partir del diseño que carga el usuario.\n\n**Rol:** desarrollo frontend con React y CSS, componentes reutilizables desde Figma, nuevas funcionalidades, corrección de errores, organización del proyecto y pruebas con Vitest dentro de un equipo remoto de seis desarrolladores.\n\n**Disponibilidad:** el producto es público; el código y la información interna del cliente son privados.",
+      technologies: ["React", "JavaScript", "CSS", "Vitest", "Git Flow"],
       links: [
         {
           type: "Web",
@@ -284,111 +334,6 @@ export const DATA = {
         },
       ],
       image: "/pricut.png",
-      video: "",
-    },
-        {
-      title: "CRM Interno - Nation",
-      href: "https://gestionclientessa.netlify.app",
-      dates: "Junio 2025",
-      active: true,
-      description:
-        "Diseñé un CRM administrativo y dashboard analítico inyectando una base de datos distribuida con MERN para digitalizar la cartera de clientes y canal de leads.\n\n- Tecnología: Optimización con WebSockets logrando actualizaciones automáticas asíncronas.\n- Ejecución: Desarrollo Full Stack, persistencia segura en MongoDB y modelado de estados de venta dinámicos.\n- Impacto: Actualmente utilizado cotidianamente por el departamento comercial, mejorando drásticamente el embudo de oportunidades.",
-      technologies: ["React", "Node.js", "MongoDB", "WebSockets"],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/frontNation",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/backNation",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Web",
-          href: "https://gestionclientessa.netlify.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "https://i.ibb.co/21d6kPfT/nationSA.png",
-      video: "",
-    },
-    {
-      title: "Festival de Música - Sitio Web",
-      href: "https://github.com/GBottarlini/festivalMus",
-      dates: "Junio 2025",
-      active: false,
-      description:
-        "Codifiqué una landing page inmersiva para un evento de festival masivo integrando elementos visuales atractivos. Desplegué galerías multimedia de recarga progresiva optimizando el viewport mediante scripts Gulp nativos de minificación (HTML5/SCSS).",
-      technologies: ["HTML5", "SCSS (SASS)", "JavaScript", "Gulp"],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/festivalMus",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Web",
-          href: "https://festivapr.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "https://i.ibb.co/JWyXqQxh/festival-Mus.png",
-      video: "",
-    },
-    {
-      title: "Ipoint E-commerce SPA",
-      href: "https://github.com/GBottarlini/ipoint-ecommerce",
-      dates: "Febrero 2024 - Actualidad",
-      active: true,
-      description:
-        "SPA de e-commerce con catálogo, carrito y pasarela de pagos usando React.js y Node.js.",
-      technologies: [
-        "React.js",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Tailwind CSS",
-        "Firebase",
-        "Material-UI",
-        "Sweetalert",
-      ],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/ipoint-ecommerce",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Web",
-          href: "https://ipoint.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "https://i.ibb.co/G4YzBqfZ/Ipointstr.png",
-      video: "",
-    },
-    {
-      title: "Blog de Café",
-      href: "https://github.com/GBottarlini/blog-cafe",
-      dates: "Marzo 2024",
-      active: false,
-      description: "Maquetación responsive con HTML5 y CSS3 enfocada en UI/UX.",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/GBottarlini/blog-cafe",
-          icon: <Icons.github className="size-3" />,
-        },
-        {
-          type: "Web",
-          href: "https://blogdecafepractice1.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "https://i.ibb.co/WWfz8dQs/blogCafe.png",
       video: "",
     },
   ],
