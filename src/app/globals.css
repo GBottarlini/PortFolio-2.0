@@ -14,6 +14,25 @@
   }
 }
 
+.marquee-track {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.marquee-track[data-reverse="true"] {
+  animation-direction: reverse;
+}
+
+.marquee:focus-within .marquee-track,
+.marquee[data-pause-on-hover="true"]:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

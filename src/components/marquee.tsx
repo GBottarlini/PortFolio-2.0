@@ -21,8 +21,9 @@ export function Marquee({
       {...props}
       role={props.role ?? "group"}
       tabIndex={props.tabIndex ?? 0}
+      data-pause-on-hover={pauseOnHover || undefined}
       className={cn(
-        "group flex overflow-hidden py-1 [--duration:36s] [--gap:0.5rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:overflow-visible",
+        "marquee group flex overflow-hidden py-1 [--duration:36s] [--gap:0.5rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 motion-reduce:overflow-visible",
         className
       )}
     >
@@ -30,14 +31,12 @@ export function Marquee({
         <div
           key={index}
           aria-hidden={index > 0}
+          data-reverse={reverse || undefined}
           className={cn(
-            "flex shrink-0 items-center justify-around gap-(--gap) pr-(--gap) [animation:marquee_var(--duration)_linear_infinite] motion-reduce:[animation:none]",
+            "marquee-track flex shrink-0 items-center justify-around gap-(--gap) pr-(--gap)",
             index === 0
               ? "motion-reduce:w-full motion-reduce:min-w-0 motion-reduce:shrink motion-reduce:flex-wrap motion-reduce:justify-start motion-reduce:pr-0"
-              : "motion-reduce:hidden",
-            "group-focus-within:[animation-play-state:paused]",
-            pauseOnHover && "group-hover:[animation-play-state:paused]",
-            reverse && "[animation-direction:reverse]"
+              : "motion-reduce:hidden"
           )}
         >
           {children}
