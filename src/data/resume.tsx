@@ -1,6 +1,11 @@
 ﻿import { Icons } from "@/components/icons";
 import { SITE_URL } from "@/lib/site";
-import { HomeIcon, FileTextIcon } from "lucide-react";
+import {
+  ChartNoAxesCombined,
+  FileTextIcon,
+  HomeIcon,
+  RadioTower,
+} from "lucide-react";
 import type { ComponentType, ReactNode } from "react";
 
 type HackathonLink = {
@@ -47,6 +52,17 @@ export const DATA = {
       logoUrl: "https://cdn.simpleicons.org/javascript/F7DF1E",
     },
     {
+      name: "TypeScript",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/typescript/3178C6",
+    },
+    {
+      name: "Next.js",
+      icon: null,
+      logoUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
       name: "HTML",
       icon: null,
       logoUrl: "https://cdn.simpleicons.org/html5/E34F26",
@@ -56,6 +72,11 @@ export const DATA = {
       icon: null,
       logoUrl:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: null,
+      logoUrl: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
     },
     {
       name: "Git",
@@ -83,9 +104,19 @@ export const DATA = {
       logoUrl: "https://cdn.simpleicons.org/supabase/3FCF8E",
     },
     {
-      name: "SQL",
+      name: "PostgreSQL",
       icon: null,
       logoUrl: "https://cdn.simpleicons.org/postgresql/4169E1",
+    },
+    {
+      name: "WebSockets",
+      icon: RadioTower,
+      logoUrl: "",
+    },
+    {
+      name: "Recharts",
+      icon: ChartNoAxesCombined,
+      logoUrl: "",
     },
     {
       name: "GitHub",
@@ -187,7 +218,7 @@ export const DATA = {
       location: "Argentina · Remoto",
       title: "Desarrollador Frontend (React.js) · Freelance",
       href: "",
-      logoUrl: "/logoViavervit.svg",
+      logoUrl: "/logo-viavervit.jpg",
       start: "Marzo 2025",
       end: "Agosto 2025",
       description:
@@ -250,7 +281,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/fiscalia-dashboard.svg",
+      image: "/fiscalia-dashboard.png",
       video: "",
     },
     {
@@ -284,7 +315,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Construí una aplicación interna para que el equipo comercial pueda buscar clientes con mayor rapidez, cruzar información de clientes y vehículos, gestionar estados de seguimiento en tiempo real y prevenir contactos duplicados.\n\n**Rol:** desarrollo Full Stack completo con React, Node.js, Express, MongoDB y WebSockets.\n\n**Disponibilidad:** no hay demo pública; la imagen es ilustrativa y no contiene datos productivos.",
+        "Construí una aplicación interna para que el equipo comercial pueda buscar clientes con mayor rapidez, cruzar información de clientes y vehículos, gestionar estados de seguimiento en tiempo real y prevenir contactos duplicados.\n\n**Rol:** desarrollo Full Stack completo con React, Node.js, Express, MongoDB y WebSockets.\n\n**Disponibilidad:** no hay demo pública; la captura muestra la pantalla inicial vacía y no contiene datos productivos.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "WebSockets"],
       links: [
         {
@@ -298,7 +329,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/crm-dashboard.svg",
+      image: "/crm-nation.png",
       video: "",
     },
     {

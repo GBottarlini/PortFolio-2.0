@@ -23,12 +23,18 @@ S8. Correct the approved technical findings: canonical site metadata, Open Graph
 
 S9. Add the Viavervit logo supplied by the user: “te brindo el logo de viavervit”. Use a local optimized asset in the Viavervit work entry.
 
+S10. Replace the illustrative Fiscalía and CRM media with the user-provided screenshots: “te dejo tambien una imagen del proyecto de Fiscalia” and “tambien del crm que hice para nation solo tiene la pantalla inicial sin clientes ni datos ni nada”. Use the original Viavervit logo file supplied in `public/`.
+
+S11. Modernize the technologies section following the user request: “me gustaria agregar algunas tegnologias mas de las que usamos actualmente y me gustaria que tenga un diseño de que vayan pasando asi no queda tan estatico y tiene un poco mas de onda, similar a este componente”. Add only technologies evidenced by the portfolio, use a horizontally animated marquee, pause it on hover, and disable movement when reduced motion is requested.
+
 ## Tasks
 
 - T1 — S2-S7 — `inline` (no writer trigger; one coherent content/privacy work unit) — **completed** — Commit: `d05788d` — Risk: item 2, removed potentially sensitive CRM media and public access paths.
 - T2 — S8 — `inline` (no writer trigger; cohesive SEO/accessibility/performance work unit) — **completed** — Commit: `a40efff` — Risk: item 6, no browser regression tests cover semantic, motion, metadata, or responsive behavior.
 - T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
 - T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: `a7b5536` — Risk: none; visual asset only.
+- T5 — S10 — `inline` (small verified media replacement) — **completed** — Commit: pending — Risk: item 2; the published CRM screenshot was independently verified to contain no client records or populated personal data.
+- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commit: pending — Risk: item 6; structural, accessibility, reduced-motion, lint, typecheck, and build checks passed; browser-level visual inspection remains manual.
 
 ## Log
 
@@ -51,3 +57,11 @@ L8 — 2026-11-17 — Feature implementation closed locally with commits `d05788
 L9 — 2026-11-18 — User request: “Bueno quiero que terminemos de hacer los cambios de ayer, te brindo el logo de viavervit”. Reopened the feature for a small local logo integration in the Viavervit work entry.
 
 L10 — 2026-11-18 — T4 completed. Added a local optimized SVG representation of the supplied Viavervit logo and connected it to the Viavervit work entry. Structural asset/reference checks, `pnpm check`, `git diff --check`, and the parent `pnpm typecheck` spot-check passed. The first structural check could not run because `python` is unavailable; it was rerun successfully with Node.js.
+
+L11 — 2026-11-18 — User request: “te dejo tambien una imagen del proyecto de Fiscalia. y tambien del crm que hice para nation solo tiene la pantalla inicial sin clientes ni datos ni nada”. The supplied CRM screenshot was visually inspected and contains empty search fields with no client records or populated personal data. Reopened the feature to replace the illustrative media and use the original Viavervit logo file.
+
+L12 — 2026-11-18 — User request: “En este apartado me gustaria agregar algunas tegnologias mas de las que usamos actualmente y me gustaria que tenga un diseño de que vayan pasando asi no queda tan estatico y tiene un poco mas de onda, similar a este componente”. The supplied Marquee component established the requested horizontal repeated-motion pattern.
+
+L13 — 2026-11-18 — T5 completed. Replaced the illustrative Fiscalía and CRM SVGs with the supplied PNG captures, replaced the reconstructed Viavervit SVG with the supplied JPEG, removed the Windows Zone.Identifier sidecar, and corrected the CRM availability copy. `pnpm check` passed. Independent item-2 verification confirmed no names, contact details, VINs, license plates, client rows, or populated customer data; its one stale-copy blocker was corrected and the targeted recheck passed.
+
+L14 — 2026-11-18 — T6 completed. Added verified TypeScript, Next.js, Tailwind CSS, WebSockets, and Recharts skills; clarified PostgreSQL; and replaced the static pills with a reusable two-row marquee that reverses direction, pauses on hover or keyboard focus, suppresses duplicate screen-reader announcements, and wraps without animation under reduced motion. `pnpm check`, post-correction lint, and typecheck passed. Independent item-6 verification found two accessibility blockers; two bounded corrections fixed reduced-motion width/clipping and focus semantics, and the final targeted recheck passed. Browser-level animation and narrow-layout appearance remain a manual visual check.

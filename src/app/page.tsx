@@ -4,6 +4,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import { Marquee } from "@/components/marquee";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
@@ -138,32 +139,46 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Tecnologías</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-2">
-            {DATA.skills.map((skill, id) => {
-              const Icon = skill.icon;
-              const logoUrl = skill.logoUrl;
-              return (
-                <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <div className="border border-border/70 bg-background rounded-full px-4 py-2 flex items-center gap-2 shadow-sm">
-                    {logoUrl ? (
-                      <img
-                        src={logoUrl}
-                        alt={skill.name}
-                        loading="lazy"
-                        decoding="async"
-                        className="size-4 shrink-0 object-contain"
-                      />
-                    ) : Icon ? (
-                      <Icon className="size-4 shrink-0" />
-                    ) : null}
-                    <span className="text-foreground text-sm font-medium">
-                      {skill.name}
-                    </span>
-                  </div>
-                </BlurFade>
-              );
-            })}
-          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <div className="relative grid gap-2 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] motion-reduce:overflow-visible motion-reduce:[mask-image:none]">
+              {[DATA.skills.slice(0, Math.ceil(DATA.skills.length / 2)), DATA.skills.slice(Math.ceil(DATA.skills.length / 2))].map(
+                (skills, row) => (
+                  <Marquee
+                    key={row}
+                    reverse={row === 1}
+                    pauseOnHover
+                    repeat={3}
+                    aria-label={`Tecnologías utilizadas, fila ${row + 1}`}
+                  >
+                    {skills.map((skill) => {
+                      const Icon = skill.icon;
+                      return (
+                        <div
+                          key={skill.name}
+                          className="flex items-center gap-2 rounded-full border border-border/70 bg-background px-4 py-2 shadow-sm"
+                        >
+                          {skill.logoUrl ? (
+                            <img
+                              src={skill.logoUrl}
+                              alt=""
+                              loading="lazy"
+                              decoding="async"
+                              className="size-4 shrink-0 object-contain"
+                            />
+                          ) : Icon ? (
+                            <Icon className="size-4 shrink-0" aria-hidden />
+                          ) : null}
+                          <span className="whitespace-nowrap text-sm font-medium text-foreground">
+                            {skill.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </Marquee>
+                )
+              )}
+            </div>
+          </BlurFade>
         </div>
       </section>
       <BlurFade delay={BLUR_FADE_DELAY * 11}>
