@@ -28,7 +28,7 @@ S9. Add the Viavervit logo supplied by the user: “te brindo el logo de viaverv
 - T1 — S2-S7 — `inline` (no writer trigger; one coherent content/privacy work unit) — **completed** — Commit: `d05788d` — Risk: item 2, removed potentially sensitive CRM media and public access paths.
 - T2 — S8 — `inline` (no writer trigger; cohesive SEO/accessibility/performance work unit) — **completed** — Commit: `a40efff` — Risk: item 6, no browser regression tests cover semantic, motion, metadata, or responsive behavior.
 - T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
-- T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: pending — Risk: none; visual asset only.
+- T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: `a7b5536` — Risk: none; visual asset only.
 
 ## Log
 
