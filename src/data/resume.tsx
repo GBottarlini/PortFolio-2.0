@@ -187,7 +187,7 @@ export const DATA = {
       location: "Argentina · Remoto",
       title: "Desarrollador Frontend (React.js) · Freelance",
       href: "",
-      logoUrl: "",
+      logoUrl: "/logoViavervit.svg",
       start: "Marzo 2025",
       end: "Agosto 2025",
       description:
