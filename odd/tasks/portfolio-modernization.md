@@ -33,8 +33,8 @@ S11. Modernize the technologies section following the user request: “me gustar
 - T2 — S8 — `inline` (no writer trigger; cohesive SEO/accessibility/performance work unit) — **completed** — Commit: `a40efff` — Risk: item 6, no browser regression tests cover semantic, motion, metadata, or responsive behavior.
 - T3 — S1,S7-S8 — `inline` (no writer trigger; final maintainability and verification work unit) — **completed** — Commit: `233edc7` — Risk: none; cleanup and verification commands do not alter product behavior.
 - T4 — S9 — `inline` (small local asset integration) — **completed** — Commit: `a7b5536` — Risk: none; visual asset only.
-- T5 — S10 — `inline` (small verified media replacement) — **completed** — Commit: pending — Risk: item 2; the published CRM screenshot was independently verified to contain no client records or populated personal data.
-- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commit: pending — Risk: item 6; structural, accessibility, reduced-motion, lint, typecheck, and build checks passed; browser-level visual inspection remains manual.
+- T5 — S10 — `inline` (small verified media replacement) — **completed** — Commit: `06531fb` — Risk: item 2; the published CRM screenshot was independently verified to contain no client records or populated personal data.
+- T6 — S11 — `inline` (one cohesive technologies-section redesign) — **completed** — Commit: `06531fb` — Risk: item 6; structural, accessibility, reduced-motion, lint, typecheck, and build checks passed; browser-level visual inspection remains manual.
 
 ## Log
 
